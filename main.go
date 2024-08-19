@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	if envArgs := os.Getenv("GO_MSFDB_ARGS"); 0 < len(envArgs) {
+	if envArgs := os.Getenv("GO_MSFDB_ARGS"); len(envArgs) > 0 {
 		commands.RootCmd.SetArgs(strings.Fields(envArgs))
 	}
 
